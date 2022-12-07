@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('detail_scientifiques', function (Blueprint $table) {
             $table->id();
-            $table->foreign('livre_id')->references('id')->on('livres');
+            $table->unsignedBigInteger('livre_id');
             $table->string("auteur");
             $table->string("resume");
             $table->string("maison_edition");

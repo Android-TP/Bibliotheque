@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('abonnements', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id');
             $table->string("duree");
             $table->boolean("status");
             $table->timestamps();

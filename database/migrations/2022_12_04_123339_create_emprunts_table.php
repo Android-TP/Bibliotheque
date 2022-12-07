@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('emprunts', function (Blueprint $table) {
             $table->id();
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('livre_id')->references('id')->on('livres');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('livre_id');
             $table->string("quantite");
             $table->date("date_remise");
             $table->boolean("status");

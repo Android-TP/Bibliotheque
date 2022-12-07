@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('detail_physiques', function (Blueprint $table) {
             $table->id();
-            $table->foreign('livre_id')->references('id')->on('livres');
+            $table->unsignedBigInteger('livre_id');
             $table->string("couleur");
             $table->integer("largeur");
             $table->integer("longeur");
