@@ -18,4 +18,10 @@ use App\Http\Controllers\Abonnement\AbonnementController;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-Route::post("/abonnement", [AbonnementController::class, "store"]);
+
+Route::controller(AbonnementController::class)->group(function () {
+    Route::post("/abonnement", "store");
+    Route::get("/abonnement",'index');
+    Route::get("/abonnement/{id}", 'show')->where('id', '[0-9]+');
+});
+

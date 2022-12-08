@@ -19,15 +19,7 @@ class AbonnementController extends Controller
         return response()->json(Abonnement::all());
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -43,35 +35,34 @@ class AbonnementController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Abonnement  $abonnement
+     * @param  int  $abonnement_id
      * @return \Illuminate\Http\Response
      */
-    public function show(Abonnement $abonnement)
+    public function show( int $abonnement_id)
     {
-        //
+        return response()->json(Abonnement::where("id", "=", $abonnement_id)->first()??["response"=>"not found"]);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Abonnement  $abonnement
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Abonnement $abonnement)
-    {
-        //
-    }
+
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateAbonnementRequest  $request
-     * @param  \App\Models\Abonnement  $abonnement
+     * @param  int $abonnement_id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAbonnementRequest $request, Abonnement $abonnement)
+    public function update(UpdateAbonnementRequest $request, int $abonnement_id)
     {
-        //
+        $abonnement = Abonnement::where("id", "=", $abonnement_id)->first();
+        $validated = $request->validated();
+        if($abonnement){
+            $abonnement->user_id = $validated["user_id"];
+            $abonnement->status = $validated["status"];
+            $abonnement->duree = $validated["duree"];
+        }else{
+            return response()->json(["response"=>"not found"], 404);
+        }
     }
 
     /**

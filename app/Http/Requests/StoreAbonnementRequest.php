@@ -27,7 +27,8 @@ class StoreAbonnementRequest extends FormRequest
     {
         return [
             "user_id"=>["required", "integer"],
-            "duree"=>["required"]
+            "duree"=>["required"],
+            "status"=>["required", "boolean"]
         ];
     }
 
