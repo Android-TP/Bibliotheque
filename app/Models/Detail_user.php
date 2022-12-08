@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Detail_user extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "user_id",
+        "matricule",
+        "description",
+        "image"
+    ];
 }

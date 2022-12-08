@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use \Illuminate\Contracts\Validation\Validator;
+use \Illuminate\Http\Exceptions\HttpResponseException;
 
 class StoreEmpruntRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class StoreEmpruntRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +26,22 @@ class StoreEmpruntRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            "user_id"=>["required", "integer"],
+            "livre_id"=>["required", "integer"],
+            "quantite"=>["required"],
+            "date_remise"=>["required", "date"],
+            "status"=>["required", "in:0,1"]
         ];
     }
+
+       /**
+ * Failed validation disable redirect
+ *
+ * @param Validator $validator
+ */
+protected function failedValidation(Validator $validator)
+{
+
+    throw new HttpResponseException(response()->json($validator->errors(), 422));
+}
 }

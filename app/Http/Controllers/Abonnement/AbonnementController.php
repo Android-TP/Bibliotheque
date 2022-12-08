@@ -16,7 +16,7 @@ class AbonnementController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Abonnement::all());
     }
 
     /**
@@ -37,7 +37,7 @@ class AbonnementController extends Controller
      */
     public function store(StoreAbonnementRequest $request)
     {
-        //
+       return response()->json(Abonnement::create($request->all()));
     }
 
     /**
