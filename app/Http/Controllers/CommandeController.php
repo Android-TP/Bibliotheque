@@ -15,7 +15,7 @@ class CommandeController extends Controller
      */
     public function index()
     {
-        //
+       return response()->json(Commande::all());
     }
 
     /**
@@ -36,7 +36,7 @@ class CommandeController extends Controller
      */
     public function store(StoreCommandeRequest $request)
     {
-        //
+        return response()->json(Commande::create($request->all()));
     }
 
     /**
@@ -47,7 +47,7 @@ class CommandeController extends Controller
      */
     public function show(Commande $commande)
     {
-        //
+        return response()->json($commande);
     }
 
     /**
@@ -70,7 +70,14 @@ class CommandeController extends Controller
      */
     public function update(UpdateCommandeRequest $request, Commande $commande)
     {
-        //
+        $validated = $request->validated();
+        if($commande){
+            $commande->nom_utilisateur = $validated["nom_utilisateur"];
+            $commande->intitule = $validated["intitule"];
+            $commande->maison_edition = $validated["maison_edition"];
+        }else{
+            return response()->json(["response"=>"not found"], 404);
+        }
     }
 
     /**
@@ -81,6 +88,7 @@ class CommandeController extends Controller
      */
     public function destroy(Commande $commande)
     {
-        //
+        $commande->delete();
+        return response()->json(["response"=>"success"]);
     }
 }

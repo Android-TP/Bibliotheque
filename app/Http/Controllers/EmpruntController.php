@@ -15,7 +15,7 @@ class EmpruntController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Emprunt::all());
     }
 
     /**
@@ -36,7 +36,7 @@ class EmpruntController extends Controller
      */
     public function store(StoreEmpruntRequest $request)
     {
-        //
+        return response()->json(Emprunt::create($request->all()));
     }
 
     /**
@@ -47,7 +47,7 @@ class EmpruntController extends Controller
      */
     public function show(Emprunt $emprunt)
     {
-        //
+        return response()->json($emprunt);
     }
 
     /**
@@ -70,7 +70,16 @@ class EmpruntController extends Controller
      */
     public function update(UpdateEmpruntRequest $request, Emprunt $emprunt)
     {
-        //
+        $validated = $request->validated();
+        if($emprunt){
+            $emprunt->user_id = $validated["user_id"];
+            $emprunt->livre_id = $validated["livre_id"];
+            $emprunt->quantite = $validated["quantite"];
+            $emprunt->date_remise = $validated["date_remise"];
+            $emprunt->status = $validated["status"];
+        }else{
+            return response()->json(["response"=>"not found"], 404);
+        }
     }
 
     /**
@@ -81,6 +90,6 @@ class EmpruntController extends Controller
      */
     public function destroy(Emprunt $emprunt)
     {
-        //
+        $emprunt->delete();
     }
 }
