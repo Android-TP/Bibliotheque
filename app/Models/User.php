@@ -41,4 +41,23 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+   /**
+     * Get the user associated with the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function detail(): HasOne
+    {
+        return $this->hasOne(Detail_user::class, 'user_id', 'id');
+    }
+    /**
+     * Get all of the emprunt for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function emprunt(): HasMany
+    {
+        return $this->hasMany(Emprunt::class, 'user_id', 'id');
+    }
 }

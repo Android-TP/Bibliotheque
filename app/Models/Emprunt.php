@@ -15,4 +15,14 @@ class Emprunt extends Model
         "date_remise",
         "status"
     ];
+
+    /**
+     * Get the user that owns the Emprunt
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user(): BelongsTo
+    {
+        return $this->belongsTo(User::class);
+    }
 }
