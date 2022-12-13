@@ -38,9 +38,9 @@ class AbonnementController extends Controller
      * @param  int  $abonnement_id
      * @return \Illuminate\Http\Response
      */
-    public function show( int $abonnement_id)
+    public function show( Abonnement $abonnement)
     {
-        return response()->json(Abonnement::where("id", "=", $abonnement_id)->first()??["response"=>"not found"]);
+        return response()->json($abonnement);
     }
 
 
@@ -52,9 +52,9 @@ class AbonnementController extends Controller
      * @param  int $abonnement_id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateAbonnementRequest $request, int $abonnement_id)
+    public function update(UpdateAbonnementRequest $request, Abonnement $abonnement)
     {
-        $abonnement = Abonnement::where("id", "=", $abonnement_id)->first();
+
         $validated = $request->validated();
         if($abonnement){
             $abonnement->user_id = $validated["user_id"];
@@ -73,6 +73,7 @@ class AbonnementController extends Controller
      */
     public function destroy(Abonnement $abonnement)
     {
-        //
+        $abonnement->delete();
+        return response()->json(["response"=>"success"]);
     }
 }
