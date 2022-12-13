@@ -16,7 +16,7 @@ class DetailUserController extends Controller
      */
     public function index()
     {
-        //
+       return response()->json(Detail_user::all());
     }
 
     /**
@@ -37,7 +37,11 @@ class DetailUserController extends Controller
      */
     public function store(StoreDetail_userRequest $request)
     {
-        //
+        $requette = $request->all();
+        if ($request->hasFile('image')) {
+            $requette["image"] = str_replace("users/images/", "", $request->image->store('users/images'));
+            }
+        return response()->json(Detail_user::create($requette));
     }
 
     /**
@@ -48,7 +52,7 @@ class DetailUserController extends Controller
      */
     public function show(Detail_user $detail_user)
     {
-        //
+       return response()->json($detail_user);
     }
 
     /**
@@ -71,7 +75,13 @@ class DetailUserController extends Controller
      */
     public function update(UpdateDetail_userRequest $request, Detail_user $detail_user)
     {
-        //
+        $validated = $request->validated();
+        $detail_user->user_id = $validated["user_id"];
+        $detail_user->matricule = $validated["matricule"];
+        $detail_user->description = $validated["description"];
+        if ($request->hasFile('image')) {
+            $detail_user->image = str_replace("users/images/", "", $request->image->store('users/images'));
+            }
     }
 
     /**
@@ -82,6 +92,6 @@ class DetailUserController extends Controller
      */
     public function destroy(Detail_user $detail_user)
     {
-        //
+        $detail_user->delete();
     }
 }
