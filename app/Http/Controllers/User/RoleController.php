@@ -16,7 +16,7 @@ class RoleController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Role::all());
     }
 
     /**
@@ -37,7 +37,7 @@ class RoleController extends Controller
      */
     public function store(StoreRoleRequest $request)
     {
-        //
+        return Role::create($request->all());
     }
 
     /**
@@ -48,7 +48,7 @@ class RoleController extends Controller
      */
     public function show(Role $role)
     {
-        //
+        return response->json($role);
     }
 
     /**
@@ -71,7 +71,8 @@ class RoleController extends Controller
      */
     public function update(UpdateRoleRequest $request, Role $role)
     {
-        //
+        $role->nom = $request->validated()["nom"];
+        $role->save();
     }
 
     /**
@@ -82,6 +83,7 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
-        //
+       $role->delete();
+       return response()->json(["response"=>"success"]);
     }
 }

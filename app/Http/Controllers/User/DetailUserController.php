@@ -93,5 +93,6 @@ class DetailUserController extends Controller
     public function destroy(Detail_user $detail_user)
     {
         $detail_user->delete();
+        return response()->json(["response"=>"success"]);
     }
 }
