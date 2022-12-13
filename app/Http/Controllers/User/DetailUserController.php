@@ -82,6 +82,7 @@ class DetailUserController extends Controller
         if ($request->hasFile('image')) {
             $detail_user->image = str_replace("users/images/", "", $request->image->store('users/images'));
             }
+        $detail_user->save();
     }
 
     /**

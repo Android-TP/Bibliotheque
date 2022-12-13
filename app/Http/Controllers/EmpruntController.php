@@ -77,6 +77,7 @@ class EmpruntController extends Controller
             $emprunt->quantite = $validated["quantite"];
             $emprunt->date_remise = $validated["date_remise"];
             $emprunt->status = $validated["status"];
+            $emprunt->save();
         }else{
             return response()->json(["response"=>"not found"], 404);
         }

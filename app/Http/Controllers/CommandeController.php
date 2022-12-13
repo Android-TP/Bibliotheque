@@ -75,6 +75,7 @@ class CommandeController extends Controller
             $commande->nom_utilisateur = $validated["nom_utilisateur"];
             $commande->intitule = $validated["intitule"];
             $commande->maison_edition = $validated["maison_edition"];
+            $commande->save();
         }else{
             return response()->json(["response"=>"not found"], 404);
         }
