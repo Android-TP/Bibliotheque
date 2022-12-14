@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\stock;
+namespace App\Http\Controllers\Api\User;
 
-use App\Models\Livre;
-use App\Http\Requests\StoreLivreRequest;
-use App\Http\Requests\UpdateLivreRequest;
+use App\Models\Role;
+use App\Http\Requests\StoreRoleRequest;
+use App\Http\Requests\UpdateRoleRequest;
 use App\Http\Controllers\Controller;
 
-class LivreController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class LivreController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Role::all());
     }
 
     /**
@@ -32,32 +32,32 @@ class LivreController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreLivreRequest  $request
+     * @param  \App\Http\Requests\StoreRoleRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreLivreRequest $request)
+    public function store(StoreRoleRequest $request)
     {
-        //
+        return Role::create($request->all());
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Livre  $livre
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function show(Livre $livre)
+    public function show(Role $role)
     {
-        //
+        return response->json($role);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Livre  $livre
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function edit(Livre $livre)
+    public function edit(Role $role)
     {
         //
     }
@@ -65,23 +65,25 @@ class LivreController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateLivreRequest  $request
-     * @param  \App\Models\Livre  $livre
+     * @param  \App\Http\Requests\UpdateRoleRequest  $request
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateLivreRequest $request, Livre $livre)
+    public function update(UpdateRoleRequest $request, Role $role)
     {
-        //
+        $role->nom = $request->validated()["nom"];
+        $role->save();
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Livre  $livre
+     * @param  \App\Models\Role  $role
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Livre $livre)
+    public function destroy(Role $role)
     {
-        //
+       $role->delete();
+       return response()->json(["response"=>"success"]);
     }
 }

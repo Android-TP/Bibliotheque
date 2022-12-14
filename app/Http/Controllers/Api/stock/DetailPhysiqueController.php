@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\Stock;
+namespace App\Http\Controllers\Api\stock;
 
-use App\Models\Categorie;
-use App\Http\Requests\StoreCategorieRequest;
-use App\Http\Requests\UpdateCategorieRequest;
-use App\Http\Controllers\Controller;
+use App\Models\Detail_physique;
+use App\Http\Requests\StoreDetail_physiqueRequest;
+use App\Http\Requests\UpdateDetail_physiqueRequest;
 
-class CategorieController extends Controller
+class DetailPhysiqueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -32,10 +31,10 @@ class CategorieController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreCategorieRequest  $request
+     * @param  \App\Http\Requests\StoreDetail_physiqueRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCategorieRequest $request)
+    public function store(StoreDetail_physiqueRequest $request)
     {
         //
     }
@@ -43,10 +42,10 @@ class CategorieController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Categorie  $categorie
+     * @param  \App\Models\Detail_physique  $detail_physique
      * @return \Illuminate\Http\Response
      */
-    public function show(Categorie $categorie)
+    public function show(Detail_physique $detail_physique)
     {
         //
     }
@@ -54,10 +53,10 @@ class CategorieController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Categorie  $categorie
+     * @param  \App\Models\Detail_physique  $detail_physique
      * @return \Illuminate\Http\Response
      */
-    public function edit(Categorie $categorie)
+    public function edit(Detail_physique $detail_physique)
     {
         //
     }
@@ -65,11 +64,11 @@ class CategorieController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateCategorieRequest  $request
-     * @param  \App\Models\Categorie  $categorie
+     * @param  \App\Http\Requests\UpdateDetail_physiqueRequest  $request
+     * @param  \App\Models\Detail_physique  $detail_physique
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateCategorieRequest $request, Categorie $categorie)
+    public function update(UpdateDetail_physiqueRequest $request, Detail_physique $detail_physique)
     {
         //
     }
@@ -77,10 +76,10 @@ class CategorieController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Categorie  $categorie
+     * @param  \App\Models\Detail_physique  $detail_physique
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Categorie $categorie)
+    public function destroy(Detail_physique $detail_physique)
     {
         //
     }

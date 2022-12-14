@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Abonnement;
+namespace App\Http\Controllers\Api\Abonnement;
 
 use App\Models\Abonnement;
 use App\Http\Requests\StoreAbonnementRequest;

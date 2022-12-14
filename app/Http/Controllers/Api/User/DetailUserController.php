@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Api\User;
 
 use App\Models\Detail_user;
 use App\Http\Requests\StoreDetail_userRequest;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Stock;
+namespace App\Http\Controllers\Api\Stock;
 
 use App\Models\Detail_scientifique;
 use App\Http\Requests\StoreDetail_scientifiqueRequest;

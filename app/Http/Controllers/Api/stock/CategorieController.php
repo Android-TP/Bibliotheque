@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api\Stock;
 
-use App\Models\Detail_physique;
-use App\Http\Requests\StoreDetail_physiqueRequest;
-use App\Http\Requests\UpdateDetail_physiqueRequest;
+use App\Models\Categorie;
+use App\Http\Requests\StoreCategorieRequest;
+use App\Http\Requests\UpdateCategorieRequest;
+use App\Http\Controllers\Controller;
 
-class DetailPhysiqueController extends Controller
+class CategorieController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +32,10 @@ class DetailPhysiqueController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDetail_physiqueRequest  $request
+     * @param  \App\Http\Requests\StoreCategorieRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreDetail_physiqueRequest $request)
+    public function store(StoreCategorieRequest $request)
     {
         //
     }
@@ -42,10 +43,10 @@ class DetailPhysiqueController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Detail_physique  $detail_physique
+     * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function show(Detail_physique $detail_physique)
+    public function show(Categorie $categorie)
     {
         //
     }
@@ -53,10 +54,10 @@ class DetailPhysiqueController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Detail_physique  $detail_physique
+     * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function edit(Detail_physique $detail_physique)
+    public function edit(Categorie $categorie)
     {
         //
     }
@@ -64,11 +65,11 @@ class DetailPhysiqueController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateDetail_physiqueRequest  $request
-     * @param  \App\Models\Detail_physique  $detail_physique
+     * @param  \App\Http\Requests\UpdateCategorieRequest  $request
+     * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateDetail_physiqueRequest $request, Detail_physique $detail_physique)
+    public function update(UpdateCategorieRequest $request, Categorie $categorie)
     {
         //
     }
@@ -76,10 +77,10 @@ class DetailPhysiqueController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Detail_physique  $detail_physique
+     * @param  \App\Models\Categorie  $categorie
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Detail_physique $detail_physique)
+    public function destroy(Categorie $categorie)
     {
         //
     }
