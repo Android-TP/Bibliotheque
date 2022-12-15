@@ -16,6 +16,7 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, "index"]);
+Route::get("/commander", [MainController::class, "commander"]);
 Route::get('/sd', [MainController::class, "index"])->name("user-profile");
 Route::get('/sd1', [MainController::class, "index"])->name("user-management");
 Route::get('/sd2', [MainController::class, "index"])->name("tables");
@@ -26,6 +27,7 @@ Route::get('/sd6', [MainController::class, "index"])->name("static-sign-in");
 Route::get('/sd7', [MainController::class, "index"])->name("static-sign-up");
 Route::get('/sd8', [MainController::class, "index"])->name("notifications");
 Route::get('/sd9', [MainController::class, "index"])->name("profile");
+Route::get("/admin", [MainController::class, "dashboard"])->name("admin");
 
 Route::get('/dashboard', function () {
     return view('dashboard');

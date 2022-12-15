@@ -3,15 +3,23 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Livre;
 
 class MainController extends Controller
 {
     //
 
     public function index(){
-        return view("pages.index");
+        return view("pages.index", ["livres"=>Livre::all()]);
     }
     public function user_profile(){
 
+    }
+    public function dashboard(){
+        return view("dashboard.custom-dash");
+    }
+
+    public function commander(){
+        return view("pages.billing");
     }
 }

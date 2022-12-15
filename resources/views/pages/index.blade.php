@@ -5,7 +5,118 @@
     <x-navbars.sidebar activePage="billing"></x-navbars.sidebar>
     <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
         <!-- Navbar -->
-        {{-- <x-navbars.navs.auth titlePage="Billing"></x-navbars.navs.auth> --}}
+        <x-navbars.navs.auth titlePage="Accueil"></x-navbars.navs.auth>
+        <div class="container">
+        <div class="row">
+            <div class="row py-3">
+
+                    <div class="card col-sm-4 my-3">
+                        <div class="col-auto">
+                            <div class="avatar avatar-xl position-relative">
+                                <img src="{{ asset('images/logos-unilu.jpg') }}" alt="profile_image"
+                                    class="w-100 border-radius-lg shadow-sm">
+                            </div>
+                        </div>
+                        <div>Math-info</div>
+
+
+                    </div>
+                    <div class="card col-sm-4 my-3">
+                        <div class="col-auto">
+                            <div class="avatar avatar-xl position-relative">
+                                <img src="{{ asset('images/logos-unilu.jpg') }}" alt="profile_image"
+                                    class="w-100 border-radius-lg shadow-sm">
+                            </div>
+                        </div>
+                        <div>Géologie</div>
+                    </div>
+                    <div class="card col-sm-4 my-3">
+                        <div class="col-auto">
+                            <div class="avatar avatar-xl position-relative">
+                                <img src="{{ asset('images/logos-unilu.jpg') }}" alt="profile_image"
+                                    class="w-100 border-radius-lg shadow-sm">
+                            </div>
+                        </div>
+                        <div>Géographie et chimie</div>
+                    </div>
+
+
+            </div>
+            <div class="card">
+            <table class="table align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th
+                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            ID
+                        </th>
+                        <th
+                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            PHOTO</th>
+                        <th
+                            class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
+                            TITRE</th>
+                        <th
+                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            ISBN</th>
+                        <th
+                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            MAISON D'EDITION</th>
+                        <th
+                            class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                            ANNEE D'EDITION
+                        </th>
+                        <th class="text-secondary opacity-7"></th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                    <p class="mb-0 text-sm">6</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex px-2 py-1">
+                                <div>
+                                    <img src="{{ asset('assets') }}/img/team-4.jpg"
+                                        class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="d-flex flex-column justify-content-center">
+                                <h6 class="mb-0 text-sm">Miriam</h6>
+                            </div>
+                        </td>
+                        <td class="align-middle text-center text-sm">
+                            <p class="text-xs text-secondary mb-0">
+                                miriam@creative-tim.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">Creator</span>
+                        </td>
+                        <td class="align-middle text-center">
+                            <span class="text-secondary text-xs font-weight-bold">26/06/18</span>
+                        </td>
+                        <td class="align-middle">
+                            <a rel="tooltip" class="btn btn-success btn-link"
+                                href="" data-original-title=""
+                                title="">
+                                <i class="material-icons">Emprunter</i>
+                                <div class="ripple-container"></div>
+                            </a>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
 
  </main>
  <x-plugins></x-plugins>
