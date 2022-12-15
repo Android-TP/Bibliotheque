@@ -7,6 +7,7 @@ use App\Http\Controllers\User\DetailUserController;
 use App\Http\Controllers\User\RoleController;
 use App\Http\Controllers\EmpruntController;
 use App\Http\Controllers\CommandeController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //     Route::get("/abonnement",'index');
 //     Route::get("/abonnement/{id}", 'show')->where('id', '[0-9]+');
 // });
+Route::post("/login", [LoginController::class, "login"]);
 Route::middleware("auth:sanctum")->group(function () {
 Route::resource('commande', CommandeController::class)->except(["create", "edit"]);
 Route::resource('abonnement', AbonnementController::class)->except(["create", "edit"]);

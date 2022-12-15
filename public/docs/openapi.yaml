@@ -43,6 +43,48 @@ paths:
       tags:
         - Endpoints
       security: []
+  /api/login:
+    post:
+      summary: ''
+      operationId: postApiLogin
+      description: ''
+      parameters:
+        -
+          in: header
+          name: Content-Type
+          description: ''
+          example: application/json
+          schema:
+            type: string
+        -
+          in: header
+          name: Accept
+          description: ''
+          example: application/json
+          schema:
+            type: string
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: else.becker@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: ew5+v$!jASp|Gvi
+              required:
+                - email
+                - password
+      security: []
   /api/commande:
     get:
       summary: 'Display a listing of the resource.'
@@ -111,19 +153,19 @@ paths:
                 nom_utilisateur:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: muaryaifmccybwxhz
+                  example: bnehemprdncnimiubelslhc
                 intitule:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: u
+                  example: adooaukxlordnwceznm
                 maison_edition:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: sqgbeyvqdnzwpermsdv
+                  example: zhb
                 description:
                   type: string
                   description: 'Must not be greater than 90 characters.'
-                  example: 'Officiis consequatur reiciendis amet odit consequatur consequatur et enim.'
+                  example: 'Ex dignissimos officia eligendi unde aut.'
               required:
                 - nom_utilisateur
                 - intitule
@@ -198,19 +240,19 @@ paths:
                 nom_utilisateur:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: oeblqdgueuijxecmhcqxvc
+                  example: vvx
                 intitule:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: iig
+                  example: ukszkzaahzrhbhnjyldcl
                 maison_edition:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: ywgtelmdwnnwcqeps
+                  example: mvxqycvpc
                 description:
                   type: string
                   description: 'Must not be greater than 90 characters.'
-                  example: 'Quaerat adipisci cupiditate aperiam et.'
+                  example: 'Autem eveniet qui et minima et ut.'
               required:
                 - nom_utilisateur
                 - intitule
@@ -245,7 +287,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the commande.'
-        example: 18
+        example: 15
         required: true
         schema:
           type: integer
@@ -317,11 +359,11 @@ paths:
                 user_id:
                   type: integer
                   description: ''
-                  example: 1
+                  example: 19
                 duree:
                   type: string
                   description: ''
-                  example: assumenda
+                  example: minus
                 status:
                   type: boolean
                   description: ''
@@ -399,11 +441,11 @@ paths:
                 user_id:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 12
                 duree:
                   type: string
                   description: ''
-                  example: hic
+                  example: facilis
               required:
                 - user_id
                 - duree
@@ -512,11 +554,11 @@ paths:
                 matricule:
                   type: string
                   description: ''
-                  example: dignissimos
+                  example: voluptas
                 description:
                   type: string
                   description: ''
-                  example: vero
+                  example: debitis
                 image:
                   type: string
                   format: binary
@@ -594,15 +636,15 @@ paths:
                 user_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 17
                 matricule:
                   type: string
                   description: ''
-                  example: non
+                  example: voluptatem
                 description:
                   type: string
                   description: ''
-                  example: et
+                  example: nemo
                 image:
                   type: string
                   format: binary
@@ -640,7 +682,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the detail user.'
-        example: 11
+        example: 7
         required: true
         schema:
           type: integer
@@ -712,23 +754,23 @@ paths:
                 user_id:
                   type: integer
                   description: ''
-                  example: 13
+                  example: 20
                 livre_id:
                   type: integer
                   description: ''
-                  example: 5
+                  example: 18
                 quantite:
                   type: string
                   description: ''
-                  example: sit
+                  example: sunt
                 date_remise:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2022-12-13T12:22:00'
+                  example: '2022-12-15T15:05:08'
                 status:
                   type: string
                   description: 'Must be one of <code>0</code> or <code>1</code>.'
-                  example: '1'
+                  example: '0'
               required:
                 - user_id
                 - livre_id
@@ -804,23 +846,23 @@ paths:
                 user_id:
                   type: integer
                   description: ''
-                  example: 15
+                  example: 4
                 livre_id:
                   type: integer
                   description: ''
-                  example: 19
+                  example: 13
                 quantite:
                   type: string
                   description: ''
-                  example: dolores
+                  example: quidem
                 date_remise:
                   type: string
                   description: 'Must be a valid date.'
-                  example: '2022-12-13T12:22:00'
+                  example: '2022-12-15T15:05:08'
                 status:
                   type: string
                   description: 'Must be one of <code>0</code> or <code>1</code>.'
-                  example: '1'
+                  example: '0'
               required:
                 - user_id
                 - livre_id
@@ -856,7 +898,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the emprunt.'
-        example: 7
+        example: 11
         required: true
         schema:
           type: integer
@@ -928,7 +970,7 @@ paths:
                 nom:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: scvnelixmimjvb
+                  example: ktkuglsrrnhycu
               required:
                 - nom
       security: []
@@ -1000,7 +1042,7 @@ paths:
                 nom:
                   type: string
                   description: 'Must not be greater than 25 characters.'
-                  example: kml
+                  example: mjznorhqnojpvzs
               required:
                 - nom
       security: []
@@ -1032,7 +1074,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the role.'
-        example: 11
+        example: 1
         required: true
         schema:
           type: integer

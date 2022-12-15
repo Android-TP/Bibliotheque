@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "705cb9af-3222-4c52-8a68-785a7b1ffbbd",
+        "_postman_id": "32537561-7be3-47cc-8e6a-3a084843d6d8",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -66,6 +66,37 @@
                             "name": ""
                         }
                     ]
+                },
+                {
+                    "name": "POST api\/login",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/login",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/login"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"email\":\"else.becker@example.org\",\"password\":\"ew5+v$!jASp|Gvi\"}"
+                        },
+                        "description": "",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
                 },
                 {
                     "name": "Display a listing of the resource.",
@@ -137,7 +168,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nom_utilisateur\":\"muaryaifmccybwxhz\",\"intitule\":\"u\",\"maison_edition\":\"sqgbeyvqdnzwpermsdv\",\"description\":\"Officiis consequatur reiciendis amet odit consequatur consequatur et enim.\"}"
+                            "raw": "{\"nom_utilisateur\":\"bnehemprdncnimiubelslhc\",\"intitule\":\"adooaukxlordnwceznm\",\"maison_edition\":\"zhb\",\"description\":\"Ex dignissimos officia eligendi unde aut.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -158,7 +189,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "15",
                                     "description": "The ID of the commande."
                                 }
                             ]
@@ -214,7 +245,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "17",
+                                    "value": "13",
                                     "description": "The ID of the commande."
                                 }
                             ]
@@ -232,7 +263,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nom_utilisateur\":\"oeblqdgueuijxecmhcqxvc\",\"intitule\":\"iig\",\"maison_edition\":\"ywgtelmdwnnwcqeps\",\"description\":\"Quaerat adipisci cupiditate aperiam et.\"}"
+                            "raw": "{\"nom_utilisateur\":\"vvx\",\"intitule\":\"ukszkzaahzrhbhnjyldcl\",\"maison_edition\":\"mvxqycvpc\",\"description\":\"Autem eveniet qui et minima et ut.\"}"
                         },
                         "description": "",
                         "auth": {
@@ -253,7 +284,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6",
+                                    "value": "19",
                                     "description": "The ID of the commande."
                                 }
                             ]
@@ -347,7 +378,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":1,\"duree\":\"assumenda\",\"status\":false}"
+                            "raw": "{\"user_id\":19,\"duree\":\"minus\",\"status\":false}"
                         },
                         "description": "",
                         "auth": {
@@ -442,7 +473,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":19,\"duree\":\"hic\"}"
+                            "raw": "{\"user_id\":12,\"duree\":\"facilis\"}"
                         },
                         "description": "",
                         "auth": {
@@ -566,13 +597,13 @@
                                 },
                                 {
                                     "key": "matricule",
-                                    "value": "dignissimos",
+                                    "value": "voluptas",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "description",
-                                    "value": "vero",
+                                    "value": "debitis",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -602,7 +633,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "7",
                                     "description": "The ID of the detail user."
                                 }
                             ]
@@ -658,7 +689,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "12",
+                                    "value": "11",
                                     "description": "The ID of the detail user."
                                 }
                             ]
@@ -679,19 +710,19 @@
                             "formdata": [
                                 {
                                     "key": "user_id",
-                                    "value": 15,
+                                    "value": 17,
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "matricule",
-                                    "value": "non",
+                                    "value": "voluptatem",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "description",
-                                    "value": "et",
+                                    "value": "nemo",
                                     "type": "text",
                                     "description": ""
                                 },
@@ -726,7 +757,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "18",
+                                    "value": "1",
                                     "description": "The ID of the detail user."
                                 }
                             ]
@@ -820,7 +851,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":13,\"livre_id\":5,\"quantite\":\"sit\",\"date_remise\":\"2022-12-13T12:22:00\",\"status\":\"1\"}"
+                            "raw": "{\"user_id\":20,\"livre_id\":18,\"quantite\":\"sunt\",\"date_remise\":\"2022-12-15T15:05:08\",\"status\":\"0\"}"
                         },
                         "description": "",
                         "auth": {
@@ -841,7 +872,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "7",
+                                    "value": "11",
                                     "description": "The ID of the emprunt."
                                 }
                             ]
@@ -897,7 +928,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "8",
+                                    "value": "19",
                                     "description": "The ID of the emprunt."
                                 }
                             ]
@@ -915,7 +946,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"user_id\":15,\"livre_id\":19,\"quantite\":\"dolores\",\"date_remise\":\"2022-12-13T12:22:00\",\"status\":\"1\"}"
+                            "raw": "{\"user_id\":4,\"livre_id\":13,\"quantite\":\"quidem\",\"date_remise\":\"2022-12-15T15:05:08\",\"status\":\"0\"}"
                         },
                         "description": "",
                         "auth": {
@@ -936,7 +967,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "16",
+                                    "value": "18",
                                     "description": "The ID of the emprunt."
                                 }
                             ]
@@ -1030,7 +1061,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nom\":\"scvnelixmimjvb\"}"
+                            "raw": "{\"nom\":\"ktkuglsrrnhycu\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1051,7 +1082,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "11",
+                                    "value": "1",
                                     "description": "The ID of the role."
                                 }
                             ]
@@ -1107,7 +1138,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "3",
+                                    "value": "8",
                                     "description": "The ID of the role."
                                 }
                             ]
@@ -1125,7 +1156,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"nom\":\"kml\"}"
+                            "raw": "{\"nom\":\"mjznorhqnojpvzs\"}"
                         },
                         "description": "",
                         "auth": {
@@ -1146,7 +1177,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "10",
+                                    "value": "5",
                                     "description": "The ID of the role."
                                 }
                             ]
