@@ -9,6 +9,16 @@
     outline: 1px solid royalblue;
 
 }
+.royal-blue{
+    background-color: royalblue;
+}
+.color-white{
+    color: white;
+}
+.bg-red{
+    color: white;
+    background-color: red;
+}
 .title-smart-input{
     font-weight: 600;
     color: grey;
