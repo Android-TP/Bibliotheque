@@ -18,6 +18,7 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController::class, "index"]);
 Route::get("/commander", [MainController::class, "commander"])->name("commander");
 Route::get("/books", [MainController::class, "books"])->name("books");
+Route::get("/abonnement", [MainController::class, "abonnement"])->name("abonnement");
 Route::get('/sd', [MainController::class, "index"])->name("user-profile");
 Route::get('/sd1', [MainController::class, "index"])->name("user-management");
 Route::get('/sd2', [MainController::class, "index"])->name("tables");

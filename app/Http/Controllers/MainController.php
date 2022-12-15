@@ -23,6 +23,10 @@ class MainController extends Controller
         return view("pages.commande");
     }
 
+    public function abonnement(){
+        return view("pages.abonnement");
+    }
+
     public function books(){
         return view("pages.books");
     }
