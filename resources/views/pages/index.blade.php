@@ -7,7 +7,7 @@
         <!-- Navbar -->
         <x-navbars.navs.auth titlePage="Accueil"></x-navbars.navs.auth>
         <div class="container">
-        <div class="row">
+            <div class="row">
             <div class="row py-3">
 
                     <div class="card col-sm-4 my-3">

@@ -1,0 +1,18 @@
+.smart-input{
+    border-radius: 5px;
+    margin: 0.6rem;
+    max-width: 50vw;
+    border: 2px solid rgb(202, 200, 200);
+
+}
+.smart-input:focus{
+    outline: 1px solid royalblue;
+
+}
+.title-smart-input{
+    font-weight: 600;
+    color: grey;
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-left: 5vw;
+}

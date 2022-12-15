@@ -20,6 +20,10 @@ class MainController extends Controller
     }
 
     public function commander(){
-        return view("pages.billing");
+        return view("pages.commande");
+    }
+
+    public function books(){
+        return view("pages.books");
     }
 }

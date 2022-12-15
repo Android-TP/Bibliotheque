@@ -24,10 +24,10 @@
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">
         <div class="mx-3">
-            <a class="btn bg-gradient-primary w-100" href="https://www.creative-tim.com/product/material-dashboard-laravel" target="_blank">Commandes</a>
+            <a class="btn bg-gradient-primary w-100" href="{{route('commander')}}" >Commandes</a>
         </div>
         <div class="mx-3">
-            <a class="btn bg-gradient-primary w-100" href="#" target="_blank">Livres</a>
+            <a class="btn bg-gradient-primary w-100" href="{{route('books')}}" >Livres</a>
         </div>
         <div class="mx-3">
             <a class="btn bg-gradient-primary w-100"
