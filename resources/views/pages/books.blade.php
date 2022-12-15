@@ -29,56 +29,53 @@
                             <th
                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                 MAISON D'EDITION</th>
-                            <th
-                                class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                                ANNEE D'EDITION
-                            </th>
+                           
                             <th class="text-secondary opacity-7"></th>
                         </tr>
                     </thead>
                     <tbody>
+          @foreach ($livres as $cle=> $livre)
+          <tr>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div class="d-flex flex-column justify-content-center">
+                        <p class="mb-0 text-sm">{{$cle+1}}</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex px-2 py-1">
+                    <div>
+                        <img src="{{ asset('assets') }}/img/team-4.jpg"
+                            class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="d-flex flex-column justify-content-center">
+                    <h6 class="mb-0 text-sm text-overflow">{{$livre->nom}}</h6>
+                </div>
+            </td>
+            <td class="align-middle text-center text-sm">
+                <p class="text-xs text-secondary mb-0">
+                    {{$livre->detail->isbn}}</p>
+            </td>
+            <td class="align-middle text-center">
+                <span class="text-secondary text-xs font-weight-bold">{{$livre->detail->maison_edition}}</span>
+            </td>
 
-                        <tr>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <p class="mb-0 text-sm">6</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                    <div>
-                                        <img src="{{ asset('assets') }}/img/team-4.jpg"
-                                            class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">Miriam</h6>
-                                </div>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <p class="text-xs text-secondary mb-0">
-                                    miriam@creative-tim.com</p>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">Creator</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">26/06/18</span>
-                            </td>
-                            <td class="align-middle">
-                                <a rel="tooltip" class="btn btn-success btn-link"
-                                    href="" data-original-title=""
-                                    title="">
-                                    <i class="material-iconsd">Emprunter</i>
-                                    <div class="ripple-container"></div>
-                                </a>
+            <td class="align-middle">
+                <a rel="tooltip" class="btn btn-success btn-link"
+                    href="" data-original-title=""
+                    title="">
+                    <i class="material-iconsd">Emprunter</i>
+                    <div class="ripple-container"></div>
+                </a>
 
-                            </td>
-                        </tr>
+            </td>
+        </tr>
+          @endforeach
+
                     </tbody>
                 </table>
             </div>
