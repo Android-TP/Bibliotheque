@@ -10,7 +10,15 @@
             <div class="card-header royal-blue color-white" >Abonnement</div>
   <div class="card-body">Année : 2022-2023</div>
   <div class="card-footer">
-    <div class="btn bg-red">S'abonner</div>
+    @non_inscrit
+     <form action="{{ route('post-abonnement') }}" method="post">
+      @csrf
+      <input type="hidden" name="rien"  value="rien">
+        <button class="btn bg-red">S'abonner</button>
+    </form>
+      @else
+      <button class="btn btn-success"> abonné </button>
+    @endnon_inscrit
   </div>
         </div>
      </div>

@@ -9,6 +9,11 @@
     outline: 1px solid royalblue;
 
 }
+.grid-2{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    column-gap: 1vw;
+}
 .royal-blue{
     background-color: royalblue;
 }

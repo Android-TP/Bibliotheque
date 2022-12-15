@@ -34,7 +34,7 @@
         </div>
         <div class="mx-3">
             <a class="btn bg-red w-100"
-                href="https://www.creative-tim.com/product/material-dashboard-pro-laravel" target="_blank" type="button">Emprunts</a>
+                href="{{route('emprunts')}}"  type="button">Emprunts</a>
         </div>
     </div>
 </aside>

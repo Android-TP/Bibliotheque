@@ -5,6 +5,8 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Commande;
 use App\Models\Emprunt;
 use App\Models\Abonnement;
@@ -32,7 +34,10 @@ class AppServiceProvider extends ServiceProvider
     {
         //
         Schema::defaultStringLength(191);
-
+        Blade::if('non_inscrit', function () {
+            // dd(Abonnement::where("user_id", "=", Auth::user()->id)->count());
+            return Abonnement::where("user_id", "=", Auth::user()->id)->count()<=0;
+        });
         Route::bind('Commande', function($value){
             return Commande::findOrFail($value);
         });

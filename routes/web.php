@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\AbonnementUserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get("/books", [MainController::class, "books"])->name("books");
     Route::get("/abonnement", [MainController::class, "abonnement"])->name("abonnement");
     Route::get("/emprunts", [MainController::class, "emprunts"])->name("emprunts");
+    Route::post("/abonnement", [AbonnementUserController::class, "store"])->name("post-abonnement");
 });
 
 
