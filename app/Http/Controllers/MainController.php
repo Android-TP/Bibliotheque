@@ -28,6 +28,7 @@ class MainController extends Controller
     }
 
     public function books(){
+        
         return view("pages.books");
     }
     public function emprunts(){

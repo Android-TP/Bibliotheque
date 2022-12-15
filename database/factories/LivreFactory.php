@@ -17,7 +17,8 @@ class LivreFactory extends Factory
     public function definition()
     {
         return [
-            //
+            "nom"=>$this->faker->sentence,
+            "categorie_id"=>1
         ];
     }
 }
