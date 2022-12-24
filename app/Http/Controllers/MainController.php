@@ -44,6 +44,6 @@ class MainController extends Controller
         return view("pages.books", ["livres"=>Livre::all()]);
     }
     public function emprunts(){
-        return view("pages.emprunts");
+        return view("pages.emprunts", ["livres"=>Livre::all()]);
     }
 }

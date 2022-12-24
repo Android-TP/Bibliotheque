@@ -29,14 +29,14 @@
                             <th
                                 class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                 MAISON D'EDITION</th>
-                           
+
                             <th class="text-secondary opacity-7"></th>
                         </tr>
                     </thead>
                     <tbody>
           @foreach ($livres as $cle=> $livre)
-          <tr>
-            <td>
+          <tr class="hidden show-books">
+            <td >
                 <div class="d-flex px-2 py-1">
                     <div class="d-flex flex-column justify-content-center">
                         <p class="mb-0 text-sm">{{$cle+1}}</p>
@@ -65,12 +65,21 @@
             </td>
 
             <td class="align-middle">
+                @non_inscrit
+                <a rel="tooltip" class="btn btn-secondary btn-link interdit"
+                href="" data-original-title=""
+                title="">
+                <i class="material-iconsd">interdit</i>
+                <div class="ripple-container"></div>
+            </a>
+                @else
                 <a rel="tooltip" class="btn btn-success btn-link"
                     href="" data-original-title=""
                     title="">
                     <i class="material-iconsd">Emprunter</i>
                     <div class="ripple-container"></div>
                 </a>
+                @endnon_inscrit
 
             </td>
         </tr>

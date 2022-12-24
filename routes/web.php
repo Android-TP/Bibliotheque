@@ -28,9 +28,7 @@ Route::middleware(['auth'])->group(function () {
 
 Route::get("/admin", [MainController::class, "dashboard"])->name("admin");
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [MainController::class, "index"])->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

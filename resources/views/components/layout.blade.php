@@ -21,7 +21,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('assets') }}/img/apple-icon.png">
-    <link rel="icon" type="image/png" href="{{ asset('assets') }}/img/favicon.png">
+    <link rel="icon" type="image/png" href="{{ asset('images/LOGO_UNILU.png') }}">
     <title>
         Bibliothèque Faculté des sciences
     </title>
@@ -62,5 +62,25 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="{{ asset('assets') }}/js/material-dashboard.min.js?v=3.0.0"></script>
+<script>
+    if(document.getElementById("booksearch")){
+         document.getElementById("booksearch").addEventListener("input", function(e){
+             e.preventDefault();
+          let books = document.querySelectorAll(".show-books");
+          //console.log(books)
+          let value = this.value;
+          books.forEach(element => {
+             const regex =  /[A-Z]/g;
+                     // console.log(element.childNodes[5].childNodes[1].childNodes[1].textContent.match(value))
+                     if(element.childNodes[5].childNodes[1].childNodes[1].textContent.toLowerCase().match(value.trim().toLowerCase()) && value.trim().length>0){
+                         element.classList.remove("hidden");
+                     }else{
+                         element.classList.add("hidden");
+                     }
+          });
+
+         })
+    }
+ </script>
 </body>
 </html>

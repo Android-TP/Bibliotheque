@@ -38,6 +38,9 @@ class AppServiceProvider extends ServiceProvider
             // dd(Abonnement::where("user_id", "=", Auth::user()->id)->count());
             return Abonnement::where("user_id", "=", Auth::user()->id)->count()<=0;
         });
+
+
+
         Route::bind('Commande', function($value){
             return Commande::findOrFail($value);
         });

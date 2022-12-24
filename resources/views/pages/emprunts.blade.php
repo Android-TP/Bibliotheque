@@ -35,47 +35,47 @@
                     </thead>
                     <tbody>
 
-                        <tr>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                    <div class="d-flex flex-column justify-content-center">
-                                        <p class="mb-0 text-sm">6</p>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex px-2 py-1">
-                                    <div>
-                                        <img src="{{ asset('assets') }}/img/team-4.jpg"
-                                            class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="d-flex flex-column justify-content-center">
-                                    <h6 class="mb-0 text-sm">La Programmation Orienté objet</h6>
-                                </div>
-                            </td>
-                            <td class="align-middle text-center text-sm">
-                                <p class="text-xs text-secondary mb-0">
-                                    745-GTR-MM41</p>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">DUNOD</span>
-                            </td>
-                            <td class="align-middle text-center">
-                                <span class="text-secondary text-xs font-weight-bold">2020</span>
-                            </td>
-                            <td class="align-middle">
-                                <a rel="tooltip" class="btn btn-success btn-link"
-                                    href="" data-original-title=""
-                                    title="">
-                                    <i class="material-iconsd">Emprunter</i>
-                                    <div class="ripple-container"></div>
-                                </a>
+                        @foreach ($livres as $cle=> $livre)
+                        <tr class="hidden show-books">
+                          <td>
+                              <div class="d-flex px-2 py-1">
+                                  <div class="d-flex flex-column justify-content-center">
+                                      <p class="mb-0 text-sm">{{$cle+1}}</p>
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="d-flex px-2 py-1">
+                                  <div>
+                                      <img src="{{ asset('assets') }}/img/team-4.jpg"
+                                          class="avatar avatar-sm me-3 border-radius-lg" alt="user6">
+                                  </div>
+                              </div>
+                          </td>
+                          <td>
+                              <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm text-overflow">{{$livre->nom}}</h6>
+                              </div>
+                          </td>
+                          <td class="align-middle text-center text-sm">
+                              <p class="text-xs text-secondary mb-0">
+                                  {{$livre->detail->isbn}}</p>
+                          </td>
+                          <td class="align-middle text-center">
+                              <span class="text-secondary text-xs font-weight-bold">{{$livre->detail->maison_edition}}</span>
+                          </td>
 
-                            </td>
-                        </tr>
+                          <td class="align-middle">
+                              <a rel="tooltip" class="btn btn-success btn-link"
+                                  href="" data-original-title=""
+                                  title="">
+                                  <i class="material-iconsd">Emprunter</i>
+                                  <div class="ripple-container"></div>
+                              </a>
+
+                          </td>
+                      </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
