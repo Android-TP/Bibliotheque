@@ -4,8 +4,76 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f708aa9bc08a72215581de6a9fa019e6",
+    "content-hash": "9127b650cf5cf6281d5b2798a47a2b4d",
     "packages": [
+        {
+            "name": "asddaniel/universal-laravel",
+            "version": "v1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/asddaniel/laravel-universal.git",
+                "reference": "e5bddef13dbc57345db7a4b0c100ab55954e48d6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/asddaniel/laravel-universal/zipball/e5bddef13dbc57345db7a4b0c100ab55954e48d6",
+                "reference": "e5bddef13dbc57345db7a4b0c100ab55954e48d6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^6.0",
+                "orchestra/testbench": "^7.0",
+                "pestphp/pest": "^1.21",
+                "pestphp/pest-plugin-laravel": "^1.1",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Asddaniel\\UniversalLaravel\\UniversalServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelUniversal": "Asddaniel\\UniversalLaravel\\Facades\\LaravelUniversal"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Asddaniel\\UniversalLaravel\\": "src",
+                    "Asddaniel\\UniversalLaravel\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Assani",
+                    "email": "devasddaniel@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "universal model package",
+            "homepage": "https://github.com/asddaniel/laravel-package-laravel-package-skeleton",
+            "keywords": [
+                "asddaniel",
+                "asddaniel universal_laravel",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/asddaniel/laravel-universal/issues",
+                "source": "https://github.com/asddaniel/laravel-universal/tree/v1"
+            },
+            "time": "2023-02-12T15:14:47+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -2894,6 +2962,66 @@
                 }
             ],
             "time": "2022-11-05T23:03:38+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.14.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "b477dd2f89d0751f0e51ffb3a70181f0bc7ab8df"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/b477dd2f89d0751f0e51ffb3a70181f0bc7ab8df",
+                "reference": "b477dd2f89d0751f0e51ffb3a70181f0bc7ab8df",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.14.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-01-27T15:33:45+00:00"
         },
         {
             "name": "symfony/console",

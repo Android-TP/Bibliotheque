@@ -35,7 +35,6 @@ class AppServiceProvider extends ServiceProvider
         //
         Schema::defaultStringLength(191);
         Blade::if('non_inscrit', function () {
-            // dd(Abonnement::where("user_id", "=", Auth::user()->id)->count());
             return Abonnement::where("user_id", "=", Auth::user()->id)->count()<=0;
         });
 
